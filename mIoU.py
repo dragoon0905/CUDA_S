@@ -21,7 +21,25 @@ def _mask_transform2(pred):
         label_copy[label_copy == k] = v
     return label_copy
 
-
+name_classes = np.asarray(["road",
+                                   "sidewalk",
+                                   "building",
+                                   "wall",
+                                   "fence",
+                                   "pole",
+                                   "light",
+                                   "sign",
+                                   "vegetation",
+                                   "sky",
+                                   "person",
+                                   "rider",
+                                   "car",
+                                   "truck",
+                                   "bus",
+                                   "train",
+                                   "motorcycle",
+                                   "bicycle",
+                          "ignore"])
 
 id_to_miouid = {
     0: 0,
