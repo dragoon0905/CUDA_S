@@ -15,10 +15,8 @@ data:
     kwargs:
       root: /root/test/datasets/local_datasets/GTA5
       list_path: ${root}/datasets/gta5_list
-      base_size: [1280, 720]
-      crop_size: [1280, 720]
-      #base_size: [1024, 512]
-      #crop_size: [1024, 512]
+      base_size: [1024, 512]
+      crop_size: [1024, 512]
       random_mirror: True
       random_crop: False
       resize: True

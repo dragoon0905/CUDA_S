@@ -9,7 +9,7 @@ wandb: False
 data:
 
   num_classes: 18
-#aaaaa
+
   source:
     dataset: 'gta5'
     kwargs:
@@ -27,10 +27,10 @@ data:
  
 
   target:
-    dataset: 'IDD'
+    dataset: 'cityscapes'
     kwargs:
-      root: /root/test/datasets/local_datasets/IDD
-      list_path: ${root}/datasets/idd_list
+      root: /root/test/datasets/local_datasets/CityScapes
+      list_path: ${root}/datasets/city_list
       base_size: [1024, 512]
       crop_size: [1024, 512]
       random_mirror: True
