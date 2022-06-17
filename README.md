@@ -8,7 +8,7 @@
  To transfer the knowledge from the previous tasks to the current task, we utilize a self-training with the pseudo-best label for the current task by mining the confident information in each task.
 
 
-2.Backward Positive Transfer (BPT) 
+2. Backward Positive Transfer (BPT) 
  During an additional training step, we adopt a rehearsal method to alleviate forgetting and utilize self-training with pseudo-best label for the previous task to further improve the performance of the previous tasks using the current task knowledge.
 
 
