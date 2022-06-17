@@ -40,11 +40,11 @@
 ![image](https://user-images.githubusercontent.com/33536599/174300575-83576b37-e33c-43e4-87fe-8a928ed2e1ae.png)
 
 ## Train
-''' python
+// ''' python
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 name=gta52city
 '''
 
 ## Train
-''' python
+// ''' python
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 train=false name=gta52ciity
 '''
