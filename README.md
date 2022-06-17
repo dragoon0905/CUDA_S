@@ -44,7 +44,10 @@
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 name=gta52city
 ~~~
 
-## Train
+## Test
 ~~~python
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 train=false name=gta52ciity
 ~~~
+
+## Acknowledgments
+This code is heavily borrowed from [Pixmatch](https://github.com/lukemelas/pixmatch)
