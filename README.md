@@ -21,26 +21,31 @@
 
 + ### [TM](https://github.com/joonh-kim/ETM) (Target-specific Memory)
 ![image](https://user-images.githubusercontent.com/33536599/174299080-65ab91ca-2129-4e07-b6d5-1a6284cbca1a.png)
+
 ETM에서 각 task마다 Domain discrepancy한 정보를 담는 추가적인 subnetwork를 그대로 추가하였습니다.
 
 
 + ### Baseline-- [Pixmatch](https://github.com/lukemelas/pixmatch)
 ![image](https://user-images.githubusercontent.com/33536599/174299226-1424c901-197b-4995-807d-078034995458.png)
+
 Baseline으로 기존 UDA기법인 Pixmatch로 선정하였고 Pixmatch는 source에 대한 segmentation loss와 target에 대한 consistency loss로 구성되어 있습니다.
 
 + ### Forward Positive Transfer (FPT) framework
 ![image](https://user-images.githubusercontent.com/33536599/174299691-be645625-6fad-44bd-a4d0-701fc46b96e9.png)
+
 현재 task에서 좋은 성능을 내기 위한 loss 입니다.
 현재 task의 이미지를 각 t개의 tm을 통과 시킨 후 threshold 값을 넘고 가장 높은 confidence값을 가지는 pixel들을 추려서 pseudo best를 생성 후 target prediction(TM t)와의 Cross entropy를 이용하는 loss를 추가하였습니다. 
 
 
 + ### Backward Positive Transfer (BPT) framework
 ![image](https://user-images.githubusercontent.com/33536599/174299532-d411d2fd-100d-4a62-8567-08eebd7afe2c.png)
+
 이전 task에서 좋은 성능을 내기 위한 loss 입니다.
 샘플링되어 메모리에 저장 되어 있는 이전 task의 이미지를 각 t개의 tm을 통과 시킨 후 threshold 값을 넘고 가장 높은 confidence값을 가지는 pixel들을 추려서 pseudo best를 생성 후 target prediction(TM t)와의 Cross entropy를 이용하는 loss를 추가하였습니다. 
 
 + ### 전체 학습 framework
 ![image](https://user-images.githubusercontent.com/33536599/174313447-d924eec1-9ede-4dda-bfd9-048928b8d3cd.png)
+
 training stpe을 2가지로 나눌 수 있다. 처음에는 기존 pixmatch에 FPT loss 만 추가하여 학습을 진행하고 일정 iterration 이후에는 BPT loss를 추가하여 학습했다. 본 코드에서는 30000 iteration 이후부터 BPT loss를 추가하였다.
 
 ## Expreimental setting
@@ -48,10 +53,13 @@ training stpe을 2가지로 나눌 수 있다. 처음에는 기존 pixmatch에 F
 
 ## Result Table
 ![image](https://user-images.githubusercontent.com/33536599/174300547-954073da-3aa6-4bd3-88cd-f67822a92dfc.png)
+
 [1] Tsai, Yi-Hsuan, et al. "Learning to adapt structured output space for semantic segmentation." Proceedings of the IEEE conference on computer vision and pattern recognition. 2018.
+
 [2] Wu, Zuxuan, et al. "Ace: Adapting to changing environments for semantic segmentation." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019.
+
 [3] Melas-Kyriazi, Luke, and Arjun K. Manrai. "PixMatch: Unsupervised domain adaptation via pixelwise consistency training." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021
-![image](https://user-images.githubusercontent.com/33536599/174300575-83576b37-e33c-43e4-87fe-8a928ed2e1ae.png)
+
 
 ## Training 
 Dependiencies 
