@@ -39,12 +39,30 @@
 [3] Melas-Kyriazi, Luke, and Arjun K. Manrai. "PixMatch: Unsupervised domain adaptation via pixelwise consistency training." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021
 ![image](https://user-images.githubusercontent.com/33536599/174300575-83576b37-e33c-43e4-87fe-8a928ed2e1ae.png)
 
-## Train
+## Training 
+Dependiencies 
++ PyTorch (tested on version 1.9.1, but should work on any version)
++ Hydra 1.1: pip install hydra-core --pre
++ Other: pip install albumentations tqdm tensorboard
++ WandB (optional): pip install wandb
+
+General
+학습과 관련된 다양한 parameter들은 config 폴더에 있는 yaml 파일을 통해 설정 후 --config-name=gta5.yaml 호출합니다. 
+
+### Dataset 
++ GTA5 : https://download.visinf.tu-darmstadt.de/data/from_games/
++ SYNTHIA : http://synthia-dataset.net/downloads/ 
++ CityScapes : https://www.cityscapes-dataset.com/
++ IDD : https://idd.insaan.iiit.ac.in/dataset/download/
++ Mapillary Vistas : https://www.mapillary.com/dataset/vistas
+
+### Train
+GTA5로 학습된 모델
 ~~~python
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 name=gta52city
 ~~~
 
-## Test
+### Test
 ~~~python
 HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 train=false name=gta52ciity
 ~~~
