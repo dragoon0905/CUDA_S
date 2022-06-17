@@ -17,16 +17,16 @@
 + ### TM[1] (Target-specific Memory)
 ![image](https://user-images.githubusercontent.com/33536599/174299080-65ab91ca-2129-4e07-b6d5-1a6284cbca1a.png)
 
-### + Baseline-- Pixmatch[2]
++ ### Baseline-- Pixmatch[2]
 ![image](https://user-images.githubusercontent.com/33536599/174299226-1424c901-197b-4995-807d-078034995458.png)
 
-###  + Forward Positive Transfer (FPT) framework
++ ### Forward Positive Transfer (FPT) framework
 ![image](https://user-images.githubusercontent.com/33536599/174299691-be645625-6fad-44bd-a4d0-701fc46b96e9.png)
 
-###  + Backward Positive Transfer (BPT) framework
++ ### Backward Positive Transfer (BPT) framework
 ![image](https://user-images.githubusercontent.com/33536599/174299532-d411d2fd-100d-4a62-8567-08eebd7afe2c.png)
 
-### +전체 학습 framework
++ ### 전체 학습 framework
 ![image](https://user-images.githubusercontent.com/33536599/174300287-9d7a3e48-16ad-43d2-9429-d5d22bdd6ce2.png)
 
 ## Expreimental setting
@@ -39,4 +39,12 @@
 [3] Melas-Kyriazi, Luke, and Arjun K. Manrai. "PixMatch: Unsupervised domain adaptation via pixelwise consistency training." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021
 ![image](https://user-images.githubusercontent.com/33536599/174300575-83576b37-e33c-43e4-87fe-8a928ed2e1ae.png)
 
+## Train
+''' python
+HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 name=gta52city
+'''
 
+## Train
+''' python
+HYDRA_FULL_ERROR=1 python main.py --config-name=gta5 train=false name=gta52ciity
+'''
