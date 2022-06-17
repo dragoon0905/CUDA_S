@@ -14,7 +14,7 @@
 
 ## Method
 
-### + TM[1] (Target-specific Memory)
++ ### TM[1] (Target-specific Memory)
 ![image](https://user-images.githubusercontent.com/33536599/174299080-65ab91ca-2129-4e07-b6d5-1a6284cbca1a.png)
 
 ### + Baseline-- Pixmatch[2]
